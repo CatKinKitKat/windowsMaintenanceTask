@@ -37,4 +37,6 @@ Then go to your Settings App > System > Storage and turn on "Storage Sense".
 
 ![storagesense.png](https://raw.githubusercontent.com/CatKinKitKat/windowsMaintenanceTask/master/resources/storagesense.png)
 
+
+### We're done! Also, here's a tip
 Done, you've now configured the bare minimum of an "automated maintenace". I also use [Sycnex's Debloater](https://github.com/Sycnex/Windows10Debloater) so I uninstall every bullshit Microsoft decided it was funny to include with our installations, and other junk our computer brands included to the trashpile.
