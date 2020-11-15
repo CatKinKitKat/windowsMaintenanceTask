@@ -7,6 +7,8 @@ You can do all of this via cmd.exe or powershell.exe, however GUI is going to be
 The very first thing you should do is Schedule a Task with Windows' Task Scheduler and create a folder called MyTasks or Personal (or whatever).
 Then you'll create a task by right clicking that folder and choosing "Create Task...", and name it something coherent.
 
+![task.png](https://raw.githubusercontent.com/CatKinKitKat/windowsMaintenanceTask/master/resources/task.png)
+
 In "Configure for:" choose your Windows version, and click on "Run whether user is logged on or not" and if you're an Administrator and have privileges, also check the "Run at the highest privileges" option
 
 Then jump to "Triggers" and click on "New", your timeframe is yours only, I don't know or care about your life, so schedule it accordingly to what fits you. I've choosen to run it monthly at the very last day.
@@ -17,14 +19,22 @@ Jumping to "Actions" you're going to add the following commands (one at a time) 
 "sfc /scannow"
 "cleanmgr /sagerun:_n_" \[__NOTE:__ _n_ is a number between 1 and 255; choose one at will\]
 
+![commands.png](https://raw.githubusercontent.com/CatKinKitKat/windowsMaintenanceTask/master/resources/commands.png)
+
 Click "OK" and Type in your Password!
 
 After that go to your cmd or powershell (if you're Admin, run as Admin) and execute the "cleanmgr /sageset:_n_" command. \[__NOTE:__ _n_ must be the same _n_ you've choosen before\]
+
+![diskcleanup.png](https://raw.githubusercontent.com/CatKinKitKat/windowsMaintenanceTask/master/resources/diskcleanup.png)
 
 It'll open a Disk Cleanup window, choose every option you want/need. I've choosen every option, because I want this ~~clean~~ sterilized.
 
 Then we'll navigate to dfrgui.exe (a.k.a Defragment and Optimize Drives), and we'll turn on Sheduled Optimization by clicking "Change Settings" and setting our schedule and choosing ALL drives. I'm doing it Weekly. Also check "Increase task priority..." so it works as it should if it fails somehow.
 
+![diskdefrag.png](https://raw.githubusercontent.com/CatKinKitKat/windowsMaintenanceTask/master/resources/diskdefrag.png)
+
 Then go to your Settings App > System > Storage and turn on "Storage Sense".
+
+![storagesense.png](https://raw.githubusercontent.com/CatKinKitKat/windowsMaintenanceTask/master/resources/storagesense.png)
 
 Done, you've now configured the bare minimum of an "automated maintenace". I also use [Sycnex's Debloater](https://github.com/Sycnex/Windows10Debloater) so I uninstall every bullshit Microsoft decided it was funny to include with our installations, and other junk our computer brands included to the trashpile.
